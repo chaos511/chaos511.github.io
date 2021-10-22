@@ -210,7 +210,7 @@ const Ribbon = function(uri) {
 			try {
 				new Response(e.data).arrayBuffer().then((ab) => {
 					const msg = SmartDecode(new Uint8Array(ab));
-
+console.log(msg.command)
 					if (msg.command === 'kick') {
 						mayReconnect = false;
 					}
